@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/vflopes/git-changelog/issues"
   },
-  "homepage": "https://github.com/vflopes/git-changelog#readme"
+  "homepage": "https://github.com/vflopes/git-changelog#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
 }
