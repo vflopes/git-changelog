@@ -1,0 +1,25 @@
+{
+  "name": "git-changelog",
+  "version": "1.0.0",
+  "description": "Smoothly create changelogs from commits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vflopes/git-changelog.git"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "changelog",
+    "trigger"
+  ],
+  "author": "Victor França Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vflopes/git-changelog/issues"
+  },
+  "homepage": "https://github.com/vflopes/git-changelog#readme"
+}
