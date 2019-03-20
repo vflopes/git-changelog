@@ -1,0 +1,5 @@
+{{=it.type}}({{=it.scope}}): {{=it.subject}}
+{{? it.body }}
+- {{=it.body.split(';').join('\n- ')}}{{?}}
+{{ for(let label in it.labels) { }}
+{{=label}}: {{=it.labels[label]}}{{ } }}

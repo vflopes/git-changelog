@@ -1,0 +1,7 @@
+## {{? it.labels.version }}[{{=it.labels.version}}] - {{?}}{{=new Date().toISOString()}}
+### {{=it.type}} ({{=it.scope}})
+
+{{=it.subject}}
+{{? it.body }}{{ for(let change of it.body.split(';')) { }}
+- {{=change.trim()}}{{ } }}{{?}}
+
