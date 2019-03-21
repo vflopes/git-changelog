@@ -53,7 +53,7 @@ The name of the changelog file.
 
 The changelog template. All templates are executed with [doT](http://olado.github.io/doT/index.html) syntax and you have the following properties from the `it` var:
 
-```json
+```js
 {
    "type": null, // string with type
    "scope": null, // string with scope
