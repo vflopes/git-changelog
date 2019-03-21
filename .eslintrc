@@ -1,0 +1,21 @@
+{
+	"env": {
+        "es6": true,
+        "node": true
+    },
+    "parserOptions":{
+        "ecmaVersion":2018
+    },
+	"extends": "airbnb/base",
+	"rules":{
+		"no-tabs":"off",
+		"no-console":"off",
+		"no-await-in-loop":"off",
+		"no-restricted-syntax":"off",
+		"no-continue":"off",
+		"indent": [
+            "error",
+            "tab"
+        ]
+	}
+}
