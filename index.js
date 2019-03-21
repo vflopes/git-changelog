@@ -127,6 +127,10 @@ if (process.argv[2] === '-h' || process.argv[2] === '--help') {
 	for (const type in config.types)
 		console.log(`  ${chalk.bold(type)}: ${config.types[type]}`);
 	process.exit(0);
+} else if (process.argv[2] === '-i' || process.argv[2] === '--install') {
+	let path = '!' +process.argv[0];
+	executeScripts([`git config --global alias.changelog '${path}'`]);
+	process.exit(0);
 }
 
 run();
