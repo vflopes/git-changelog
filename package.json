@@ -1,6 +1,6 @@
 {
   "name": "git-changelog",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Smoothly create changelogs from commits",
   "main": "index.js",
   "scripts": {
