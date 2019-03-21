@@ -47,7 +47,7 @@ try {
 } catch (error) {}
 
 const commitTemplate = loadTemplate(
-	config.changelogTemplate,
+	config.commitTemplate,
 	__dirname,
 	'commit'
 );
