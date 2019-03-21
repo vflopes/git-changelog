@@ -4,8 +4,9 @@
   "description": "Smoothly create changelogs from commits",
   "main": "index.js",
   "scripts": {
+	"installx86": "dpkg --add-architecture i386 && apt-get -y update && apt-get install -y libc6:i386 libstdc++6:i386",
     "lint": "./node_modules/.bin/eslint --fix ./lib",
-    "build": "pkg --o ./dist/git-changelog --targets node10-linux-x64,node10-linux-x86,node10-win-x64,node10-win-x86,node10-macos-x64 --config ./package.json ./index.js"
+    "build": "rm -rf ./dist && pkg --o ./dist/git-changelog --targets node10-linux-x64,node10-linux-x86,node10-win-x64,node10-win-x86,node10-macos-x64 --config ./package.json ./index.js && gzip -k -v ./dist/* && for file in `find ./dist -not -name \"*t.gz\"`; do zip ${file%.*}.zip $file; done "
   },
   "pkg": {
     "assets": [
