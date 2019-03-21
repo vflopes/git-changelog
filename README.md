@@ -8,7 +8,7 @@ Do you ever wanted a tool to standardize your git commits? Also to generate the 
 
 ### Installation
 
-1. Go to (releases)[https://github.com/vflopes/git-changelog/releases]
+1. Go to [releases](https://github.com/vflopes/git-changelog/releases)
 2. Download the version that fits your system and extract the executable file where you can keep the executable forever
 3. Run the executable with `-i` option, example: `./git-changelog-linux-x64 -i`
 4. Now you have the `git changelog` command
