@@ -2,6 +2,8 @@
 
 Do you ever wanted a tool to standardize your git commits? Also to generate the changelog based on commits? Here is **git-changelog**. This is a NodeJS project but we provide standalone builds that enhances the `git commit` command. You can use `git changelog` as you use `git commit` with the same arguments, except `-m`.
 
+![git-changelog](https://raw.githubusercontent.com/vflopes/git-changelog/master/changelog.gif)
+
 -----------------------------
 
 ### Installation
