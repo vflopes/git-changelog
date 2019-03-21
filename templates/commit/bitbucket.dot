@@ -1,1 +1,1 @@
-{{=it.subject}} #label {{=it.type}} {{=it.scope}}{{? it.body }} #comment - {{=it.body.split(';').join('\n- ')}}{{?}}{{? it.labels.action }} #{{=it.labels.action}}{{?}}
+{{=it.subject}} #label {{=it.type}} {{=it.scope}}{{? it.body }} #comment - {{=it.body.join('\n- ')}}{{?}}{{? it.labels.action }} #{{=it.labels.action}}{{?}}

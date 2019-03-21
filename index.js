@@ -26,7 +26,6 @@ const config = {
 	},
 	scopes:[],
 	labels:[
-		'closes',
 		'action',
 		'version'
 	],
@@ -171,24 +170,39 @@ const run = async () => {
 	answer = await inquirer.prompt({
 		type: 'input',
 		name: 'subject',
-		message: 'enter the subject:'
+		message: 'enter the subject (ex: the issue(s) id):'
 	});
 	entry.subject = answer.subject;
 
-	answer = await inquirer.prompt({
-		type: 'input',
-		name: 'body',
-		message: 'enter the body (description of commit, leave empty to ignore):'
-	});
-	if (answer.body.length > 0)
-		entry.body = answer.body;
+	let addChange = true;
 
+	while (addChange) {
+		answer = await inquirer.prompt({
+			type: 'confirm',
+			name: 'addChange',
+			message: 'do you want do describe a change?'
+		});
+		addChange = answer.addChange;
+		if (!addChange)
+			break;
+		answer = await inquirer.prompt({
+			type: 'input',
+			name: 'body',
+			message: 'enter the description:'
+		});
+		if (answer.body.length > 0) {
+			if (entry.body === null)
+				entry.body = [];
+			entry.body.push(answer.body);
+		}
+	}
+	
 	if (config.labels.length > 0) {
 		answer = await inquirer.prompt({
 			type: 'checkbox',
 			name: 'labels',
 			choices: config.labels,
-			message: 'does this commit have on or more label listed bellow?'
+			message: 'does this commit have one or more label(s) listed bellow?'
 		});
 		for (const label of answer.labels) {
 			answer = await inquirer.prompt({
