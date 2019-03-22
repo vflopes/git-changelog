@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const chalk = require('chalk');
+const fs = require('fs');
 const {
 	askType,
 	askScope,
@@ -42,8 +43,8 @@ const config = {
 };
 
 try {
-	const localConfig = require(path.join(process.cwd(), '.gitchangelog'));
-	Object.assign(config, localConfig);
+	const localConfig = fs.readFileSync(path.join(process.cwd(), '.gitchangelog')).toString('utf8');
+	Object.assign(config, JSON.parse(localConfig));
 } catch (error) {}
 
 const commitTemplate = loadTemplate(
@@ -117,7 +118,7 @@ const run = async () => {
 		executeScripts(config.afterCommit, scriptsEnvs);
 	}
 
-	console.log(chalk.greenBright.bold('commited'));
+	console.log(chalk.greenBright.bold('committed'));
 
 };
 

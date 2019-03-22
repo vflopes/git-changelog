@@ -1,0 +1,8 @@
+{
+	"scopes":[
+		"messages",
+		"scripts",
+		"library",
+		"command"
+	]
+}
