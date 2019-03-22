@@ -13,6 +13,8 @@ Do you ever wanted a tool to standardize your git commits? Also to generate the 
 3. Run the executable with `-i` option, example: `./git-changelog-linux-x64 -i`
 4. Now you have the `git changelog` command
 
+If you have a problem when executing the file on Linux/MacOS do a `chmod +x git-changelog-YOUROS/ARCH` before executing it.
+
 -----------------------------
 
 ### Customization
