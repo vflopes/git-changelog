@@ -80,7 +80,10 @@ The commit (`git -m "[commitMessage]"`) template. This template follows the same
 
 ##### types
 
-A key-value object with allowed types. The default pairs comes from **karma**. The description is shown when the user type `git changelog --help`.
+A key-value object with allowed types. The default pairs comes from **karma**. The description is shown when the user type `git changelog --help`. Can also be a string with that points to a known preset, allowed values are:
+
+- `karma`
+- `atom`
 
 -----------------------------
 

@@ -4,5 +4,6 @@
 		"scripts",
 		"library",
 		"command"
-	]
+	],
+	"types":"atom"
 }

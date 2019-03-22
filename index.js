@@ -24,15 +24,7 @@ const config = {
 	changelogFilename:'CHANGELOG.md',
 	changelogTemplate:'default',
 	commitTemplate:'karma',
-	types:{
-		feat:'new feature for the user, not a new feature for build script',
-		fix:'bug fix for the user, not a fix to a build script',
-		docs:'changes to the documentation',
-		style:'formatting, missing semi colons, etc; no production code change',
-		refactor:'refactoring production code, eg. renaming a variable',
-		test:'adding missing tests, refactoring tests; no production code change',
-		chore:'updating grunt tasks etc; no production code change'
-	},
+	types:'karma',
 	scopes:[],
 	labels:[
 		'action',
@@ -46,6 +38,36 @@ try {
 	const localConfig = fs.readFileSync(path.join(process.cwd(), '.gitchangelog')).toString('utf8');
 	Object.assign(config, JSON.parse(localConfig));
 } catch (error) {}
+
+if (config.types === 'karma') {
+	config.types = {
+		feat: 'new feature for the user, not a new feature for build script',
+		fix: 'bug fix for the user, not a fix to a build script',
+		docs: 'changes to the documentation',
+		style: 'formatting, missing semi colons, etc; no production code change',
+		refactor: 'refactoring production code, eg. renaming a variable',
+		test: 'adding missing tests, refactoring tests; no production code change',
+		chore: 'updating grunt tasks etc; no production code change'
+	};
+} else if (config.types === 'atom') {
+	config.types = {
+		'🎨 - code improvement': 'when improving the format/structure of the code',
+		'🐎 - performance improvement': 'when improving performance',
+		'🚱 - memory leak': 'when plugging memory leaks',
+		'📝 - docs': 'when writing docs',
+		'🐧 - linux fix': 'when fixing something on Linux',
+		'🍎 - macos fix': 'when fixing something on macOS',
+		'🏁 - windows fix': 'when fixing something on Windows',
+		'🐛 - bug fix': 'when fixing a bug',
+		'🔥 - removing code/files': 'when removing code or files',
+		'💚 - ci build fix': 'when fixing the CI build',
+		'✅ - adding tests': 'when adding tests',
+		'🔒 - security changes': 'when dealing with security',
+		'⬆️ - upgrading dependencies': 'when upgrading dependencies',
+		'⬇️ - downgrading dependencies': 'when downgrading dependencies',
+		'👕 - linter compliance': 'when removing linter warnings',
+	};
+}
 
 const commitTemplate = loadTemplate(
 	config.commitTemplate,
