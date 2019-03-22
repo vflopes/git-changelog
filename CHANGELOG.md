@@ -1,3 +1,13 @@
+## [v1.1.2] - 2019-03-22T16:37:58.852Z
+### 🎨 - code improvement (library)
+
+#### #1
+
+- Adding support for types presets
+- Adding support for atom type preset
+
+-----------------------------
+
 ## [v1.1.1] - 2019-03-22T10:40:17.194Z
 ### docs (messages)
 
