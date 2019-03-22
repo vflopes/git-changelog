@@ -1,3 +1,12 @@
+## 2019-03-22T17:00:30.372Z
+### 📝 - docs (messages)
+
+#### master
+
+- Adding instruction to execute the builds on Linux/MacOS
+
+-----------------------------
+
 ## [v1.1.2] - 2019-03-22T16:37:58.852Z
 ### 🎨 - code improvement (library)
 
